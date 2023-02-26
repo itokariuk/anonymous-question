@@ -4,8 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+aiogram = "==3.0.0b7"
 
 [dev-packages]
+flake8 = "*"
+mypy = "*"
+black = "*"
 
 [requires]
 python_version = "3.11"
