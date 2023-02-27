@@ -3,6 +3,12 @@ import logging
 from aiogram import Bot, Dispatcher
 
 from anonymous_question import config
+from anonymous_question import handlers
+
+
+ROUTERS = [
+    handlers.start_router,
+]
 
 
 logging.basicConfig(
@@ -17,6 +23,9 @@ def main() -> None:
 
     bot = Bot(token=config.TELEGRAM_BOT_TOKEN, parse_mode="HTML")
     dp = Dispatcher()
+
+    for router in ROUTERS:
+        dp.include_router(router)
 
     dp.run_polling(bot)
 
