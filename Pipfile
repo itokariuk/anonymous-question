@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 aiogram = "==3.0.0b7"
+python-dotenv = "*"
 
 [dev-packages]
 flake8 = "*"
